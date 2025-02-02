@@ -1,10 +1,37 @@
 {
     "name": "paperless-ngx",
-    "version": "1.0.0",
-    "module": "src/index.ts",
     "type": "module",
+    "version": "1.0.0",
+    "description": "Paperless-ngx ",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "require": "./dist/index.cjs"
+    },
+    "scripts": {
+        "build": "bun run build.ts",
+        "prepublishOnly": "bun run build"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "paperless-ngx",
+        "paperless"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/quantumsheep/quantumsheep/paperless-ngx.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/quantumsheep/paperless-ngx.ts"
+    },
+    "bugs": "https://github.com/quantumsheep/paperless-ngx.ts/issues",
     "devDependencies": {
-        "@types/bun": "latest"
+        "@types/bun": "latest",
+        "bun-plugin-dts": "^0.3.0"
     },
     "peerDependencies": {
         "typescript": "^5.0.0"
